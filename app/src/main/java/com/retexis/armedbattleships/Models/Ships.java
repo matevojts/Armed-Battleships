@@ -11,16 +11,14 @@ public class Ships {
     private ArrayList<Ship> ships;
 
     public Ships() {
-        ships = generateDefaultShips();
+        generateDefaultShips();
     }
 
-    private ArrayList<Ship> generateDefaultShips() {
-        ArrayList<Ship> defaultShips = new ArrayList<>();
-        defaultShips.add(new Ship(1, 2));
-        defaultShips.add(new Ship(2, 3));
-        defaultShips.add(new Ship(3, 3));
-        defaultShips.add(new Ship(4, 4));
-        defaultShips.add(new Ship(5, 5));
-        return defaultShips;
+    private void generateDefaultShips() {
+        ships.add(new Ship(1, 2));
+        ships.add(new Ship(2, 3));
+        ships.add(new Ship(3, 3));
+        ships.add(new Ship(4, 4));
+        ships.add(new Ship(5, 5));
     }
 }
