@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
         board = findViewById(R.id.board);
 
-        PlaceShipsManager.shipsToDefaultPlace(board, new Ships());
+        PlaceShipsManager.shipsToDefaultPlace(board, new Ships(this));
 
     }
 }

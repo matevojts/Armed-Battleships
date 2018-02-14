@@ -9,11 +9,13 @@ public class Ship {
     private int id;
     private int size;
     private int health;
+    private int color;
 
-    public Ship(int id, int size) {
+    public Ship(int id, int size, int color) {
         this.id = id;
         this.size = size;
         this.health = size;
+        this.color = color;
     }
 
     public int getId() {
@@ -38,5 +40,9 @@ public class Ship {
 
     public void decrementHealth() {
         this.health = health--;
+    }
+
+    public int getColor() {
+        return color;
     }
 }

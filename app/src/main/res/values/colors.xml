@@ -4,4 +4,10 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="field_background_default">#BBDEFB</color>
+    <color name="ship1">#f06292</color>
+    <color name="ship2">#b39ddb</color>
+    <color name="ship3">#80deea</color>
+    <color name="ship4">#81c784</color>
+    <color name="ship5">#fff176</color>
+
 </resources>

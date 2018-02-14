@@ -19,6 +19,7 @@ public class PlaceShipsManager {
 
                 Field actualField = board.getField(i, j);
                 actualField.setShipID(ships.getShips().get(i).getId());
+                actualField.getFieldsTextView().setBackgroundColor(ships.getShips().get(i).getColor());
             }
         }
     }

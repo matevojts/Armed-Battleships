@@ -37,7 +37,7 @@ public class Field extends FrameLayout {
         this.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                ShootingManager.shoot(context, Field.this, new Ships());
+                ShootingManager.shoot(context, Field.this, new Ships(context));
             }
         });
 
@@ -111,7 +111,7 @@ public class Field extends FrameLayout {
         this.columnNo = columnNo;
     }
 
-    public TextView getFieldTextView() {
+    public TextView getFieldsTextView() {
         return fieldTextView;
     }
 }

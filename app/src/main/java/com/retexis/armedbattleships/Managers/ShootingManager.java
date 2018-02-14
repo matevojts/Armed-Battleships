@@ -27,10 +27,10 @@ public class ShootingManager {
                     }
 
                 }
-                field.getFieldTextView().setText("O");
+                field.getFieldsTextView().setText("O");
                 field.setHasHit(true);
             } else {
-                field.getFieldTextView().setText("X");
+                field.getFieldsTextView().setText("X");
                 field.setHasHit(true);
             }
         } else {
