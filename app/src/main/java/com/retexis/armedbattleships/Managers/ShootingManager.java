@@ -19,7 +19,7 @@ public class ShootingManager {
 
         if (!field.hasHit()) {
             if (fieldShipID != 0) {
-                for (int i = 1; i < ships.getShips().size(); i++){
+                for (int i = 1; i <= ships.getShips().size(); i++){
                     Ship actualShip = ships.getShips().get(i);
 
                     if (actualShip.getId() == fieldShipID) {
@@ -27,11 +27,11 @@ public class ShootingManager {
                     }
 
                 }
-                Toast.makeText(context, "O", Toast.LENGTH_SHORT).show();
                 field.getFieldTextView().setText("O");
+                field.setHasHit(true);
             } else {
-                Toast.makeText(context, "X", Toast.LENGTH_SHORT).show();
                 field.getFieldTextView().setText("X");
+                field.setHasHit(true);
             }
         } else {
             Toast.makeText(context, "Field has hit already.", Toast.LENGTH_SHORT).show();

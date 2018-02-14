@@ -30,22 +30,9 @@ public class Field extends FrameLayout {
         this.xID = xID;
         this.yID = yID;
 
-        LayoutParams params = new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        params.gravity = Gravity.CENTER;
-        params.width = 100;
-        params.height = 100;
-        int margin = context.getResources().getDimensionPixelSize(R.dimen.field_TextView_padding);
-        params.setMargins(margin, margin, margin, margin);
-
-        fieldTextView = new TextView(context);
-        fieldTextView.setTextSize(20);
-        fieldTextView.setLayoutParams(params);
-
-
+        initTextView(context);
         this.addView(fieldTextView);
-
         fieldTextView.setText(context.getString(R.string.coordinates, xID, yID));
-        fieldTextView.setBackgroundColor(context.getResources().getColor(R.color.field_background_default));
 
         this.setOnClickListener(new OnClickListener() {
             @Override
@@ -72,6 +59,22 @@ public class Field extends FrameLayout {
         super(context, attrs, defStyleAttr, defStyleRes);
         this.xID = xID;
         this.yID = yID;
+    }
+
+    private void initTextView(Context context) {
+        LayoutParams params = new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT);
+        params.width = 100;
+        params.height = 100;
+        int margin = context.getResources().getDimensionPixelSize(R.dimen.field_TextView_padding);
+        params.setMargins(margin, margin, margin, margin);
+
+        fieldTextView = new TextView(context);
+        fieldTextView.setLayoutParams(params);
+        fieldTextView.setTextSize(20);
+        fieldTextView.setGravity(Gravity.CENTER);
+        fieldTextView.
+                setBackgroundColor(context.getResources().getColor(R.color.field_background_default));
     }
 
 
