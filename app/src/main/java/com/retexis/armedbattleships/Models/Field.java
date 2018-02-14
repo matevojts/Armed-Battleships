@@ -21,18 +21,18 @@ public class Field extends FrameLayout {
 
     private int shipID = 0;
     private boolean hasHit = false;
-    private int xID;
-    private int yID;
+    private int rowNo;
+    private int columnNo;
     private TextView fieldTextView;
 
-    public Field(@NonNull final Context context, int xID, int yID) {
+    public Field(@NonNull final Context context, int rowNo, int columnNo) {
         super(context);
-        this.xID = xID;
-        this.yID = yID;
+        this.rowNo = rowNo;
+        this.columnNo = columnNo;
 
         initTextView(context);
         this.addView(fieldTextView);
-        fieldTextView.setText(context.getString(R.string.coordinates, xID, yID));
+        fieldTextView.setText(context.getString(R.string.coordinates, rowNo, columnNo));
 
         this.setOnClickListener(new OnClickListener() {
             @Override
@@ -43,22 +43,22 @@ public class Field extends FrameLayout {
 
     }
 
-    public Field(@NonNull Context context, @Nullable AttributeSet attrs, int xID, int yID) {
+    public Field(@NonNull Context context, @Nullable AttributeSet attrs, int rowNo, int columnNo) {
         super(context, attrs);
-        this.xID = xID;
-        this.yID = yID;
+        this.rowNo = rowNo;
+        this.columnNo = columnNo;
     }
 
-    public Field(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr, int xID, int yID) {
+    public Field(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr, int rowNo, int columnNo) {
         super(context, attrs, defStyleAttr);
-        this.xID = xID;
-        this.yID = yID;
+        this.rowNo = rowNo;
+        this.columnNo = columnNo;
     }
 
-    public Field(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes, int xID, int yID) {
+    public Field(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes, int rowNo, int columnNo) {
         super(context, attrs, defStyleAttr, defStyleRes);
-        this.xID = xID;
-        this.yID = yID;
+        this.rowNo = rowNo;
+        this.columnNo = columnNo;
     }
 
     private void initTextView(Context context) {
@@ -95,20 +95,20 @@ public class Field extends FrameLayout {
         this.hasHit = hasHit;
     }
 
-    public int getxID() {
-        return xID;
+    public int getRowNo() {
+        return rowNo;
     }
 
-    public void setxID(int xID) {
-        this.xID = xID;
+    public void setRowNo(int rowNo) {
+        this.rowNo = rowNo;
     }
 
-    public int getyID() {
-        return yID;
+    public int getColumnNo() {
+        return columnNo;
     }
 
-    public void setyID(int yID) {
-        this.yID = yID;
+    public void setColumnNo(int columnNo) {
+        this.columnNo = columnNo;
     }
 
     public TextView getFieldTextView() {

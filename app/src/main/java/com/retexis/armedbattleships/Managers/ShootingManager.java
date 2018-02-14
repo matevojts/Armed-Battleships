@@ -19,7 +19,7 @@ public class ShootingManager {
 
         if (!field.hasHit()) {
             if (fieldShipID != 0) {
-                for (int i = 1; i <= ships.getShips().size(); i++){
+                for (int i = 0; i < ships.getShips().size(); i++){
                     Ship actualShip = ships.getShips().get(i);
 
                     if (actualShip.getId() == fieldShipID) {

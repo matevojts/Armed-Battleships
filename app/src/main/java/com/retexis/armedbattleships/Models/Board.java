@@ -39,39 +39,17 @@ public class Board extends GridLayout {
         this.setColumnCount(BOARD_WIDTH);
         fields = new Field[BOARD_HEIGHT][BOARD_WIDTH];
 
-        for (int x = 0; x < BOARD_WIDTH; x++) {
+        for (int rowNo = 0; rowNo < BOARD_WIDTH; rowNo++) {
 
-            for (int y = 0; y < BOARD_HEIGHT; y++) {
+            for (int columnNo = 0; columnNo < BOARD_HEIGHT; columnNo++) {
 
-                fields[x][y] = new Field(getContext(), x, y);
-                this.addView(fields[x][y]);
+                fields[rowNo][columnNo] = new Field(getContext(), rowNo, columnNo);
+                this.addView(fields[rowNo][columnNo]);
             }
         }
-//        Ships ships = new Ships();
     }
 
-//    public void addFieldsToBoard() {
-//
-//        for (int x = 0; x < BOARD_WIDTH; x++) {
-//
-//            for (int y = 0; y < BOARD_HEIGHT; y++) {
-//
-//                Field. param = new LayoutParams();
-//                param.height = LayoutParams.WRAP_CONTENT;
-//                param.width = LayoutParams.WRAP_CONTENT;
-//                param.setGravity(Gravity.CENTER);
-//                param.set
-//
-////                Field c = fields[x][y];
-////                c.setLayoutParams(param);
-////
-////                this.addView(fields[x][y], 100, 100);
-//                fields[x][y].setLayoutParams(param);
-//                this.addView(fields[x][y]);
-//            }
-//        }
-//    }
-
-
-
+    public Field getField(int rowNo, int columnNo) {
+        return fields[rowNo][columnNo];
+    }
 }
