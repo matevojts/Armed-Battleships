@@ -1,14 +1,8 @@
 package com.retexis.armedbattleships.Models;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.util.AttributeSet;
-import android.view.Gravity;
 import android.widget.GridLayout;
-
-import com.retexis.armedbattleships.R;
-
-import java.util.Random;
 
 /**
  * Created by matev on 2018. 02. 13..
@@ -53,6 +47,7 @@ public class Board extends GridLayout {
                 this.addView(fields[x][y]);
             }
         }
+//        Ships ships = new Ships();
     }
 
 //    public void addFieldsToBoard() {

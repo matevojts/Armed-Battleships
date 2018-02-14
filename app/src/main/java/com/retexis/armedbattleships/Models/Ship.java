@@ -15,4 +15,28 @@ public class Ship {
         this.size = size;
         this.health = size;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public void setHealth(int health) {
+        this.health = health;
+    }
+
+    public void decrementHealth() {
+        this.health = health--;
+    }
 }

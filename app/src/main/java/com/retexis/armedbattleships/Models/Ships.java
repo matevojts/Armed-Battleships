@@ -11,6 +11,7 @@ public class Ships {
     private ArrayList<Ship> ships;
 
     public Ships() {
+        ships = new ArrayList<>();
         generateDefaultShips();
     }
 
@@ -20,5 +21,13 @@ public class Ships {
         ships.add(new Ship(3, 3));
         ships.add(new Ship(4, 4));
         ships.add(new Ship(5, 5));
+    }
+
+    public ArrayList<Ship> getShips() {
+        return ships;
+    }
+
+    public void setShips(ArrayList<Ship> ships) {
+        this.ships = ships;
     }
 }
